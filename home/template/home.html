@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard do Usuário</title>
+<link rel="stylesheet" href="{{url_for('home.static', filename='css/home.css')}}">
+</head>
+<body>
+
+<!-- Barra lateral -->
+<div class="sidebar">
+    <h2>Meu Dashboard</h2>
+    <a href="#">Início</a>
+    <a href="#">Perfil</a>
+    <a href="#">Mensagens</a>
+    <a href="#">Configurações</a>
+</div>
+
+<!-- Conteúdo principal -->
+<div class="main-content">
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>Bem-vindo, {{user_name}}!</h1>
+        <form action="/logout" method="post"><button type="submit">Logout</button></form>
+    </div>
+
+    <!-- Widgets / Estatísticas -->
+    <div class="widgets">
+        <div class="widget">
+            <h3>Mensagens</h3>
+            <p>12</p>
+        </div>
+        <div class="widget">
+            <h3>Notificações</h3>
+            <p>5</p>
+        </div>
+        <div class="widget">
+            <h3>Projetos</h3>
+            <p>8</p>
+        </div>
+        <div class="widget">
+            <h3>Atividade</h3>
+            <p>Online</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login / Cadastro</title>
+<link rel="stylesheet" href="{{url_for('auth.static', filename='css/login.css')}}">
+</head>
+<body>
+
+<div class="container">
+    <button class="toggle-btn" id="toggleBtn">Cadastrar / Login</button>
+
+    <div class="forms-wrapper">
+        <!-- Login -->
+        <form method="post" id="loginForm" action="#">
+            <h2>Login</h2>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <!-- Cadastro -->
+        <form method="post" id="cadastroForm" class="hidden" action="/cadastro">
+            <h2>Cadastro</h2>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+<script src="{{url_for('auth.static', filename='js/login.js')}}"></script>
+</body>
+</html>
